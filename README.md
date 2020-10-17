@@ -1,2 +1,3 @@
 # Deyn0524-Settings-ResourceSwapper
-My settings and resource swapper in the game, Krunker.io
+My settings and resource swapper in the game, Krunker.io.
+Do whatever you like with these stuff.
