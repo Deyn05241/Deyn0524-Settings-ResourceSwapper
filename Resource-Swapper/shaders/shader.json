@@ -1,0 +1,37 @@
+{
+  "credits": "Code generated on https://hitthemoney.com/krunker-shader-maker. Made by hitthemoney#5719",
+  "uniforms": {
+    "tDiffuse": {
+      "value": null
+    },
+    "colOverlay": {
+      "value": 15663359
+    },
+    "colOverlayOpac": {
+      "value": 0.3855140186915888
+    },
+    "colBlend": {
+      "value": 3
+    },
+    "vigOpac": {
+      "value": 0
+    },
+    "vigRadius": {
+      "value": 0.4
+    },
+    "vigSoftness": {
+      "value": 0.25
+    },
+    "noiseSeed": {
+      "value": 0.02
+    },
+    "noiseOpacity": {
+      "value": 0
+    },
+    "noiseAmount": {
+      "value": 0.005
+    }
+  },
+  "fragmentShader": "\n// Code generated on https://hitthemoney.com/krunker-shader-maker\n// Made by hitthemoney#5719\n\nuniform sampler2D tDiffuse;\nvec3 colOverlay = vec3(0.9372549019607843, 0, 1);\nuniform float colOverlayOpac;\nuniform int colBlend;\nuniform float vigOpac;\nuniform float vigRadius;\nuniform float vigSoftness;\nuniform float noiseAmount;\nuniform float noiseOpacity;\nuniform float noiseSeed;\nvarying vec2 vUv;\n\nfloat rand(vec2 co) {\n    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453); // random\n}\n\nvec4 applyVignette(vec4 color) {\n    float vignetteScale = 0.65;\n\n    vec2 position = vUv * vignetteScale - vec2(0.5 * vignetteScale);\n    float dist = length(position);\n\n    float radius = vigRadius;\n    float softness = vigSoftness;\n    float vignette = smoothstep(radius, radius - softness, dist);\n\n    color.rgb = mix(color.rgb, color.rgb - (1.0 - (vignette)), vigOpac);\n\n    return color;\n}\n\nvoid main() {\n    float xs = floor(gl_FragCoord.x / 0.5);\n    float ys = floor(gl_FragCoord.y / 0.5);\n    vec4 tex = texture2D(tDiffuse, vec2(vUv.x, vUv.y));\n    vec4 tex2 = tex;\n    switch (colBlend) {\n        case 0:\n            tex2.rgb = colOverlay.rgb;\n            break;\n        case 1:\n            tex2.rgb += colOverlay.rgb;\n            break;\n        case 2:\n            tex2.rgb -= colOverlay.rgb;\n            break;\n        case 3:\n            tex2.rgb *= colOverlay.rgb;\n            break;\n        case 4:\n            tex2.rgb /= colOverlay.rgb;\n            break;\n    }\n    tex.rgb = mix(tex.rgb, tex2.rgb, colOverlayOpac);\n    vec4 noise = 200.0 * noiseAmount * vec4(rand(vec2(xs * noiseSeed, ys * noiseSeed * 50.0)) * noiseOpacity); // noise texture\n    gl_FragColor = applyVignette(tex) + noise;\n}\n\n        ",
+  "vertexShader": "\n// Code generated on https://hitthemoney.com/krunker-shader-maker\n// Made by hitthemoney#5719\n\nvarying vec2 vUv;\nvoid main() {\n    vUv = uv;\n    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n}\n        "
+}

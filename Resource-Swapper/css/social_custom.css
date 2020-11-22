@@ -1,0 +1,196 @@
+@font-face {
+    font-family: gamefont;
+    src: url(./fonts/font2.ttf)
+}
+
+.marketCard {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    width: 220px;
+    height: 220px;
+    vertical-align: top;
+    background-color: rgb(56 46 66 / 77%);
+    border-radius: 45px;
+    display: inline-block;
+    z-index: 1;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Background */
+html,
+body {
+    background: #101010 !important;
+}
+
+#backgroundImage {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    opacity: .6;
+    background-image: url(https://www.backgroundscool.com/wp-content/uploads/2020/05/002818a….jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Remove background image + android link */
+#androidDB, #iosDB {
+    display: none!important;
+}
+
+/*remove bottom and top right ad*/
+#aHolder, #rightABox {
+    display: none!important;
+}
+
+/*adjust margin for removed ads*/
+#rightFollBox {
+    margin-top: 1px!important;
+ }
+
+/* put element in line with others */
+#leftABox {
+    margin-top: 11px!important;
+}
+
+#leftAdHol {
+    left: calc(50% - 690px)!important;
+}
+
+/*feed, clan war and profile page height adjustment*/
+#feedHolder, #clanwarsHolder, #profileHolder, #itemsalesHolder {
+    bottom: 15px!important;
+}
+
+/* max page height for other social pages */
+#marketHolder, #leaderHolder, #mapsHolders, #modsHolder, .centerHolder {
+    bottom: 85px!important;
+}
+
+/* White text and icons */
+.postContent *, .postLink *:not(i), .postInfo *:not(i), .likesHolder *, .likesHolder, .feedTab , .feedTab *, .marketCard, .floatR, #searchInfo > .scrollItem, #searchInfo > .scrollItem > *, #postEntryC *, .scrollItemHead, #rightProfile > div, #rightProfile > .leftMidHolder *, #nameSwitch, .follL, .follCount, .profileTab, #replyInput, .comTxtHolder, #postTopBar *, #itemsalesList > .scrollItem *:not(.menuTabNew):not(i):not(.smDetails), .regionTitle, .regionCard > div > span, .regionCard > div > div > span:nth-child(1), .mapListItem > div > a, #mapProfile > .scrollItem *:not(.activeTab):not(b), #modProfile > .scrollItem *, #offers *, #clanRoster > .scrollItem > div, #clanInfo > .scrollItem, #pTabContent_creations *, .lName, #clanwarsInfo > .regionCard > div > a:nth-child(2), .tListN, #tMsg {
+    color: #fff!important;
+}
+
+/* gray text */
+#leaderList>.scrollItem>div, .classWeap, .postTime, .smDetails, #leaderList > .scrollItem > div > div:nth-child(2), .regionCard > div, .regionCard > div > div > span, .mapListItem > div, .mapListItem > div > span, #mapProfile > .scrollItem > div b, #clanRoster > .scrollItem > div > span, #clanInfo > .scrollItem > div, #clanwarsInfo > .regionCard > div > span *, .rName {
+    color: #aaa!important;
+}
+
+/* red text */
+#clanInfo > .scrollItem > span:nth-child(2) {
+    color: red!important;
+}
+
+/* Dark feed posts */
+.socPost, .feedTab, #rightFollBox, #leftABox, #leftYTBox, #leaderList > .scrollItem, #searchList > .scrollItem, #searchInfo > .scrollItem, #postEntryC, .scrollItemNew, .profileTab, #singlePost, #itemsalesList > .scrollItem, #clanwarsInfo>.regionCard, #clanwarsProg, .mapListItem, #mapProfile > .scrollItem, #modProfile > .scrollItem, #offers, #clanInfo > .scrollItem, #clanRoster > .scrollItem, #tMsg {
+    background-color: #282828!important;
+    box-shadow: 0px 7px 3px 0 #141414!important;
+}
+
+/* active feed tab */
+.feedTabA, .feedTabA > .material-icons, .pTabA, .tabANew, .activeTab {
+    background-color: #fff!important;
+    color: #000!important;
+    opacity: 1!important;
+}
+
+/* market menu tabs */
+.menuTabNew, .mapTabP {
+    background-color: black;
+    color: white;
+}
+
+/* Profile stat numbers */
+.pSt strong {
+    color: #aaa;
+}
+
+/* clan page world map border*/
+#sea-pseudo {
+    border: 13px solid #282828;
+}
+
+/* weird bug fix */
+.profileNav {
+    border-radius: 0px;
+}
+
+/* gift kr window */
+#giftIn, #giftMsg {
+    background-color: #282828!important;
+    color: white;
+    border: 4px solid #404040;
+}
+
+#giftPop {
+    background-color: rgba(0,0,0,.9);
+}
+
+/* Trade window resize */
+#tradePop {
+    width: 1520px;
+    height: 1000px
+}
+
+#tradePop .tHolderL, #tradePop .tHolderR {
+    width: 750px;
+    height: 950px;
+    margin-bottom: 30px;
+}
+
+#tradePop #invList0, #tradePop #invList1 {
+    height: 700px!important;
+}
+
+#tradePop #tradeList0, #tradePop #tradeList1 {
+    height: 100px!important;
+}
+
+#tMsg, .tSubOffer {
+    display: block;
+    margin: auto;
+}
+
+#tradePop .tSubOffer {
+    margin-top: 10px;
+    width: 736px;
+}
+
+#tradePop > #tMsg {
+    border: 4px solid #404040;
+    color:white;
+    width: 730px;
+}
+
+#tradePop .tItemHolder {
+    width: 84px;
+    height: 84px;
+}
+
+#tradePop .tItemImg {
+    width: 84px;
+}
+
+#tradePop .tItemN {
+    bottom: 2px;
+    font-size: 10px;
+}
+
+#tradePop .tItemHolder:hover {
+    opacity: .75;
+    border: 2px solid white!important;
+}
+
+/* Trade offer window */
+#offerPop #tMsg {
+    width: 665px;
+}
