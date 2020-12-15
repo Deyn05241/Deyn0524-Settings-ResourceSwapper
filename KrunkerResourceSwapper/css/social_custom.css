@@ -13,13 +13,12 @@ send me some KR if you like the dark theme <3
 }
 
 /* Background */
-html,
-body {
-    background: #101010 !important;
+#backgroundImage {
+    background-image: url(25508.png)
 }
 
-/* Remove background image + android link */
-#backgroundImage, #androidDB, #iosDB {
+/* Remove Android link */
+#androidDB, #iosDB {
     display: none!important;
 }
 
