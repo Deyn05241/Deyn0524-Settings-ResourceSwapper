@@ -1,15 +1,15 @@
 @import url(https://use.fontawesome.com/releases/v5.13.0/css/all.css);
 
 :root {
-    --text-color: #3f3f3f;
-    --accent-color: #ffc547;
+    --text-color: #CCCCCC;
+    --accent-color: #0080C0;
     --health-color: #fff;
     --ammo-color: #fff;
     --premium-color: #ffc547;
     --verified-color: #ffc547;
-    --menu-bg-color: rgba(255, 255, 255, 1);
-    --menu-bg-color-secondary: rgba(230, 230, 230, 1);
-    --ingame-bg-color: rgba(15, 15, 15, .2);
+    --menu-bg-color: rgba(0, 0, 0, 1);
+    --menu-bg-color-secondary: rgba(58, 58, 58, 1);
+    --ingame-bg-color: rgba(0, 0, 0, .5);
     --text-transform: none;
 }
 

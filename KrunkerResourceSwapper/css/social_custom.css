@@ -9,7 +9,7 @@ send me some KR if you like the dark theme <3
 
 @font-face {
     font-family: gamefont;
-    src: url(./fonts/font2.ttf)
+    src: url(https://raw.githubusercontent.com/South-Paw/typeface-vag-rounded/master/files/vag-rounded-400.woff2);
 }
 
 /* Background */
@@ -68,7 +68,7 @@ send me some KR if you like the dark theme <3
 
 /* Dark feed posts */
 .socPost, .feedTab, #rightFollBox, #leftABox, #leftYTBox, #leaderList > .scrollItem, #searchList > .scrollItem, #searchInfo > .scrollItem, #postEntryC, .scrollItemNew, .profileTab, #singlePost, #itemsalesList > .scrollItem, #clanwarsInfo>.regionCard, #clanwarsProg, .mapListItem, #mapProfile > .scrollItem, #modProfile > .scrollItem, #offers, #clanInfo > .scrollItem, #clanRoster > .scrollItem, #tMsg {
-    background-color: #282828!important;
+    background-color: #000000!important;
     box-shadow: 0px 7px 3px 0 #141414!important;
 }
 
@@ -92,7 +92,7 @@ send me some KR if you like the dark theme <3
 
 /* clan page world map border*/
 #sea-pseudo {
-    border: 13px solid #282828;
+    border: 13px solid #000000;
 }
 
 /* weird bug fix */
@@ -102,7 +102,7 @@ send me some KR if you like the dark theme <3
 
 /* gift kr window */
 #giftIn, #giftMsg {
-    background-color: #282828!important;
+    background-color: #000000!important;
     color: white;
     border: 4px solid #404040;
 }
