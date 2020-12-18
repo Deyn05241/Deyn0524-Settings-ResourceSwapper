@@ -7,7 +7,7 @@
     --ammo-color: #fff;
     --premium-color: #ffc547;
     --verified-color: #ffc547;
-    --menu-bg-color: rgba(0, 0, 0, 1);
+    --menu-bg-color: rgba(69, 69, 69, .1);
     --menu-bg-color-secondary: rgba(58, 58, 58, 1);
     --ingame-bg-color: rgba(0, 0, 0, .5);
     --text-transform: none;
